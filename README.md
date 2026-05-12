@@ -1,8 +1,6 @@
 # sentiment_analysis
 Sentiment Analysis through movie reviews
 
-# 한국어 영화 리뷰 감성 분석 요약 보고서
-
 ## 1. 프로젝트 개요
 
 - **목적**: 영화 리뷰 텍스트를 POSITIVE / NEGATIVE로 이진 분류  
@@ -69,15 +67,23 @@ Sentiment Analysis through movie reviews
 ### 4.2 분류 모델
 
 - **Logistic Regression** (C 튜닝)
-- **LinearSVC**  
-- (참고) MultinomialNB, RandomForest 비교용으로 사용
-
+- **LinearSVC**
+  
+- **교차검증/튜닝**
+  - `StratifiedKFold` 5-fold
+  - `GridSearchCV`로 하이퍼파라미터 탐색
 ---
 
-## 5. 기타
+## 5. 모델 성능 및 최종 결론
 
-- **결측값 없음**
-- **재현성**: RANDOM_STATE = 42 사용
+- **📊최종 선정 모델**  
+형태소 분석기  : Okt (stem=True)
+벡터화         : 형태소 TF-IDF(1,2) + char TF-IDF(2,5) 결합
+알고리즘       : LinearSVC
+C 파라미터     : 0.1
+max_features   : 70000 (형태소) + 120000 (char)
+결합 벡터 차원 : 190,000
+Val MCC        : 0.7485
 
 ---
 

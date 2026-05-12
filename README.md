@@ -77,12 +77,12 @@ Sentiment Analysis through movie reviews
 ## 5. 모델 성능 및 최종 결론
 
 - **📊최종 선정 모델**  
-- 형태소 분석기  : Okt (stem=True)
-- 벡터화         : 형태소 TF-IDF(1,2) + char TF-IDF(2,5) 결합
-- 알고리즘       : LinearSVC
-- C 파라미터     : 0.1
-- max_features   : 70000 (형태소) + 120000 (char)
-- 결합 벡터 차원 : 190,000
+- **형태소 분석기**  : Okt (stem=True)
+- **벡터화**         : 형태소 TF-IDF(1,2) + char TF-IDF(2,5) 결합
+- **알고리즘**       : LinearSVC
+- **C 파라미터**     : 0.1
+- **max_features**   : 70000 (형태소) + 120000 (char)
+- **결합 벡터 차원** : 190,000
 - **Val MCC        : 0.7485**
 
 ---
